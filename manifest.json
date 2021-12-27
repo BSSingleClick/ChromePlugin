@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "BSDownloader",
+    "version": "1.0",
+    "description": "Download song straight to beatsaber",
+    "icons": {},
+    "browser_action": {
+        "popup": "popup.html",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "webNavigation"
+    ],
+    "content_scripts": [
+        {
+          "matches": ["https://beatsaver.com/*"],
+          "js": ["popup.js"]
+        }
+    ]
+}
